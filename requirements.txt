@@ -1,0 +1,10 @@
+cocoex              0.0.0
+mlxtend             0.23.1
+numdifftools        0.9.41
+numpy               1.24.4
+pandas              2.0.3
+pflacco             NA
+scipy               1.10.1
+session_info        1.0.0
+sklearn             1.2.2
+xgboost             2.0.3
