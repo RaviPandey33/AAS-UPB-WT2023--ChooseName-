@@ -1,4 +1,4 @@
-# AAS-UPB-WT2023--ChooseName-
+# AAS-UPB-WT2023
 Automatic Algorithm Selection (AAS)
 
 Our task was to recreate the AAS experiments as described in the paper by Kerschke,2019 and Prager,22. This repository contains the code files needed to perform AAS as described. Following are the instructions for running the repository:
