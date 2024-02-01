@@ -116,8 +116,8 @@ class PairWiseRegression:
         #we have disabled kernel_svm because it doesn't work with pairs and requires only single y values like in regular regression
         self.models = {
             # 'kernel_svm': SVR(),
-            # 'rpart': DecisionTreeRegressor(),
-            # 'xgboost': XGBRegressor(),
+            'rpart': DecisionTreeRegressor(),
+            'xgboost': XGBRegressor(),
             'random_forest': RandomForestRegressor(n_estimators=500, max_features = features//3),
             
             # 'mars': Earth(),
@@ -261,6 +261,13 @@ best_solver, worst_solver = pwr.perform_pairwise_regression()
 best_solvern, worst_solvern = pwr.perform_pairwise_regression(normalized = True)
 
 
+print(f'Best Solver: {best_solver}')
+print(f'Worst Solver: {worst_solver}')
+
+print(f'Best Solver: {best_solvern}')
+print(f'Worst Solver: {worst_solvern}')
+
+
 best_solver_sbfs, worst_solver_sbfs = pwr.perform_pairwise_regression(feature_selection= "sbfs")
 best_solver_sffs, worst_solver_sffs = pwr.perform_pairwise_regression(feature_selection= "sffs")
 print(f'Best Solver: {best_solver_sbfs}')
@@ -268,9 +275,6 @@ print(f'Worst Solver: {worst_solver_sbfs}')
 
 print(f'Best Solver: {best_solver_sffs}')
 print(f'Worst Solver: {worst_solver_sffs}')
-
-print(f'Best Solver: {best_solver}')
-print(f'Worst Solver: {worst_solver}')
 
 
 
@@ -286,5 +290,3 @@ print(f'Worst Solver: {worst_solvern_sffs}')
 
 
 # 
-print(f'Best Solver: {best_solvern}')
-print(f'Worst Solver: {worst_solvern}')
