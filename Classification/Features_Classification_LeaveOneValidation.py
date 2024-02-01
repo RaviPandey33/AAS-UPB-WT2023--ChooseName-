@@ -31,7 +31,7 @@ class ClassifierTrainer_LeaveOneValidation: # Classifier Trainer Normal
         self.label_encoder = LabelEncoder()
         self.data['min_value_column'] = self.label_encoder.fit_transform(self.data['min_value_column'])
         
-        self.X = self.data.drop('min_value_column', axis=1)
+        self.X = self.data.drop(['min_value_column','fid','dim'], axis=1)
         # self.Y = self.data('min_value_column')
         
         self.loo = LeaveOneOut()
